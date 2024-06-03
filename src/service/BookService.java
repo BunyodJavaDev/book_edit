@@ -22,6 +22,18 @@ public class BookService {
     }
 
     public static void createBook() {
+        System.out.println("Enter book title: ");
+        String title = MyScanner.scanner_str.nextLine();
+        System.out.println("Enter book author: ");
+        String author = MyScanner.scanner_str.nextLine();
+        System.out.println("Enter book description: ");
+        String description = MyScanner.scanner_str.nextLine();
+        System.out.print("Enter price: ");
+        Double price = MyScanner.scanner_str.nextDouble();
+        System.out.print("Enter book count: ");
+        int count = MyScanner.scanner_num.nextInt();
+        Book book = new Book(title,author,description,price,count);
+        Database.bookList.add(book);
     }
 
     public static void updateBook() {
